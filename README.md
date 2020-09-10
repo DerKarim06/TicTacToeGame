@@ -1,2 +1,2 @@
-# SudokuGame
-Trying to setup a SudokuGame for training purposes
+# TicTacToeGame
+Trying to setup a TicTacToeGame for training purposes
