@@ -4,12 +4,26 @@ import './index.css';
 
 
 
+  class Header extends React.Component {
+    render() {
+      return (
+        <div className="headerbar">
+          <h1>TicTacToeGame</h1>
+        </div>
+      );
+    }
+  }
+
   function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
             {props.value}
         </button>
     )
+  }
+
+  function restart() {
+    window.location.reload();
   }
   
   class Board extends React.Component {
@@ -74,6 +88,18 @@ import './index.css';
     }
   }
   
+  class RestartButton extends React.Component {
+    render() {
+      return (
+        <div className="restartButtonDiv">
+          <button className="restartButton" onClick={restart}>
+            Restart
+          </button>
+        </div>
+      );
+    }
+  }
+
   class Game extends React.Component {
     render() {
       return (
@@ -109,11 +135,24 @@ import './index.css';
     }
     return null;
   }
+
+  class App extends React.Component {
+    render() {
+      return (
+        <div>
+          <Header/>
+          <Game/>
+          <RestartButton/>
+        </div>
+      );
+    }
+  }
+
   
   // ========================================
   
   ReactDOM.render(
-    <Game />,
+    <App />,
     document.getElementById('root')
   );
   
